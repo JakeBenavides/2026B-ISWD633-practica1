@@ -4,7 +4,7 @@ Un volumen anónimo es un volumen gestionado por Docker, el volumen se crea auto
 Los datos persisten mientras el contenedor exista, pero son más difíciles de gestionar y referenciar después.
 
 ```
-docker run -d --name <nombre contenedor> -v <ruta carpeta contenedor> <nombre imagen>
+docker run -d --name server-nginx -v /usr/share/nginx/html nginx:alpine
 ```
 ó
 ```
