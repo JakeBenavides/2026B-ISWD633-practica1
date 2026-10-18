@@ -11,6 +11,11 @@ docker run -d --name <nombre contenedor> -v <ruta carpeta contenedor> <nombre im
 docker run -d --name <nombre contenedor> --mount type=volume,target=<ruta carpeta contenedor> <nombre_imagen>
 ```
 destination, dst, target: La ruta donde se monta el archivo o directorio en el contenedor.
+<img width="942" height="853" alt="image" src="https://github.com/user-attachments/assets/53215bb9-57df-4f29-b673-908d9468ff03" />
+
+<img width="936" height="852" alt="image" src="https://github.com/user-attachments/assets/e759a721-2f89-451e-8d3c-583782e2de0b" />
+
+<img width="932" height="841" alt="image" src="https://github.com/user-attachments/assets/a5939da6-52d5-42a6-8055-e6b791fd4b5f" />
 
 
 ### Para eliminar el contenedor y el volumen
@@ -24,3 +29,5 @@ Los dangling volumes son volúmenes en Docker que no están asociados a ningún 
 ```
 docker volume prune
 ```
+<img width="941" height="845" alt="image" src="https://github.com/user-attachments/assets/d77a64fa-40e3-4e96-8e30-c979325456be" />
+
