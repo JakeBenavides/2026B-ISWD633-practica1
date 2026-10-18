@@ -8,7 +8,7 @@ docker volume create <nombre volumen>
 ```
 
 ### Crear el volumen nombrado: vol-postgres
-# COMPLETAR CON EL COMANDO
+#### **docker volume create vol-postgres**
 
 ## MOUNTPOINT
 Un mountpoint se refiere al lugar en el sistema de archivos donde un dispositivo de almacenamiento se une (o monta) al sistema de archivos. Es el punto donde los archivos y directorios almacenados en ese dispositivo de almacenamiento son accesibles para el sistema operativo y las aplicaciones.
@@ -39,7 +39,7 @@ docker run -d --name <nombre contenedor> --mount type=volume,src=<nombre >,dst=<
 
 
 ### Crear la red net-drupal de tipo bridge
-# COMPLETAR CON EL COMANDO
+#### **docker network create --driver bridge net-drupal**
 
 ### Crear un servidor postgres vinculado a la red net-drupal, completar la ruta del contenedor
 ```
@@ -53,9 +53,13 @@ docker run -d --name client-postgres --publish published=9500,target=80 -e PGADM
 ```
 
 ### Usar el cliente postgres para conectarse al servidor postgres, para la conexión usar el nombre del servidor en lugar de la dirección IP.
+#### Se ingresó a http://localhost:9500 con pgAdmin y se registró un nuevo servidor con Host server-postgres, puerto 5432, base de datos db_drupal, usuario user_drupal y contraseña 12345. Funciona porque ambos contenedores están en la misma red net-drupal, donde Docker resuelve los nombres de los contenedores. Tras instalar Drupal, pgAdmin muestra 60 tablas en db_drupal.
 
 ### Crear los volúmenes necesarios para drupal, esto se puede encontrar en la documentación
-### COMPLETAR CON LOS COMANDOS
+#### **docker volume create vol-drupal-modules**
+#### **docker volume create vol-drupal-profiles**
+#### **docker volume create vol-drupal-themes**
+#### **docker volume create vol-drupal-sites**
 
 ### Crear el contenedor server-drupal vinculado a la red, usar la imagen drupal, y vincularlo a los volúmenes nombrados
 ```
@@ -63,11 +67,11 @@ docker run -d --name server-drupal --publish published=9700,target=80 -v <nombre
 ```
 
 ### Ingrese al server-drupal y siga el paso a paso para la instalación.
-# COMPLETAR CON UNA CAPTURA DE PANTALLA DEL PASO 4
+<img width="1599" height="763" alt="image" src="https://github.com/user-attachments/assets/8ead2d1e-eeb2-47d0-9c96-1fd5d9816814" />
+<img width="799" height="852" alt="image" src="https://github.com/user-attachments/assets/be737c0c-51e9-4e2b-bb53-28f982ec1e99" />
 
-_La instalación puede tomar varios minutos, mientras espera realice un diagrama de los contenedores que ha creado en este apartado._
+<img width="1600" height="841" alt="image" src="https://github.com/user-attachments/assets/e6ad5775-be0b-49ba-9b04-385ce3332221" />
 
-# COMPLETAR CON EL DIAGRAMA SOLICITADO
 
 ### Eliminar un volumen específico
 ```
