@@ -28,7 +28,7 @@ Ruta carpeta host: .../ejercicio3/www
 #### docker run -d --name wordpress-wp --network net-wp -p 9500:80 -e WORDPRESS_DB_HOST=mysql-wp -e WORDPRESS_DB_USER=jake -e WORDPRESS_DB_PASSWORD=1234 -e WORDPRESS_DB_NAME=wordpress -v C:\Users\LENOVO\ejercicio3\www:/var/www/html wordpress
 
 ### Personalizar la apariencia de wordpress y agregar una entrada
-####Se ingresó a http://localhost:9500, se completó la instalación de WordPress, se cambió el estilo del sitio desde el Editor del sitio y se publicó una nueva entrada.
+#### Se ingresó a http://localhost:9500, se completó la instalación de WordPress, se cambió el estilo del sitio desde el Editor del sitio y se publicó una nueva entrada.
 <img width="957" height="969" alt="image" src="https://github.com/user-attachments/assets/c5e15c6c-8397-4d86-a089-f151a386eb01" />
 
 ### Eliminar el contenedor y crearlo nuevamente, ¿qué ha sucedido?
